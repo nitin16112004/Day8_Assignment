@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+    let student = {
+      name: "Jeeshan",
+      age: 18,
+      grade: "A",
+      subjects: ["Math", "English"]
+    };
+
+    function addSubject(subject) {
+      student.subjects.push(subject);
+    }
+
+    function updateGrade(newGrade) {
+      student.grade = newGrade;
+    }
+
+    function displayStudentInfo() {
+      console.log("8. Student Info:");
+      console.log("Name:", student.name);
+      console.log("Age:", student.age);
+      console.log("Grade:", student.grade);
+      console.log("Subjects:", student.subjects.join(", "));
+    }
+
+    addSubject("Science");
+    updateGrade("A+");
+    displayStudentInfo();
+    </script>
+</body>
+</html>

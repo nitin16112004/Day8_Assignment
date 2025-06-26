@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+ 
+    let library = [
+      { title: "Book A", author: "Author A", year: 2000, available: true },
+      { title: "Book B", author: "Author B", year: 2010, available: true },
+      { title: "Book C", author: "Author C", year: 2020, available: false }
+    ];
+
+    function displayAvailableBooks() {
+      console.log("9. Available books:");
+      for (let book of library) {
+        if (book.available) {
+          console.log(`${book.title} by ${book.author}`);
+        }
+      }
+    }
+
+    function borrowBook(title) {
+      for (let book of library) {
+        if (book.title === title && book.available) {
+          book.available = false;
+          console.log(`${title} has been borrowed.`);
+          return;
+        }
+      }
+      console.log(`${title} is not available.`);
+    }
+
+    function addNewBook(title, author, year) {
+      library.push({ title, author, year, available: true });
+      console.log(`Added new book: ${title}`);
+    }
+
+    displayAvailableBooks();
+    borrowBook("Book A");
+    addNewBook("Book D", "Author D", 2023);
+    displayAvailableBooks();
+    </script>
+</body>
+</html>
